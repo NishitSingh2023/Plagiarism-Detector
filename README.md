@@ -4,14 +4,14 @@ This repository contains code and associated files for deploying a plagiarism de
 
 ## Project Overview
 
-In this project, you will be tasked with building a plagiarism detector that examines a text file and performs binary classification; labeling that file as either *plagiarized* or *not*, depending on how similar that text file is to a provided source text. Detecting plagiarism is an active area of research; the task is non-trivial and the differences between paraphrased answers and original work are often not so obvious.
+In this project,I was tasked with building a plagiarism detector that examines a text file and performs binary classification; labeling that file as either *plagiarized* or *not*, depending on how similar that text file is to a provided source text. Detecting plagiarism is an active area of research; the task is non-trivial and the differences between paraphrased answers and original work are often not so obvious.
 
-This project will be broken down into three main notebooks:
+This project will be broken down into three main notebooks which were used and deployed on AWS Sagemaker:
 
 **Notebook 1: Data Exploration**
+
 * Load in the corpus of plagiarism text data.
 * Explore the existing data features and the data distribution.
-* This first notebook is **not** required in your final project submission.
 
 **Notebook 2: Feature Engineering**
 
@@ -29,5 +29,21 @@ This project will be broken down into three main notebooks:
 
 ---
 
-Please see the [README](https://github.com/udacity/ML_SageMaker_Studies/tree/master/README.md) in the root directory for instructions on setting up a SageMaker notebook and downloading the project files (as well as the other notebooks).
+## Setup Instructions
+
+The notebooks provided in this repository are intended to be executed using Amazon's SageMaker platform. The following is a brief set of instructions on setting up a managed notebook instance using SageMaker, from which the notebooks can be completed and run.
+
+### Log in to the AWS console and create a notebook instance
+
+Log in to the [AWS console](https://console.aws.amazon.com) and go to the SageMaker dashboard. Click on 'Create notebook instance'.
+* The notebook name can be anything and using ml.t2.medium is a good idea as it is covered under the free tier. 
+* For the role, creating a new role works fine. Using the default options is also okay. 
+* It's important to note that you need the notebook instance to have access to S3 resources, which it does by default. In particular, any S3 bucket or object, with “sagemaker" in the name, is available to the notebook.
+* Use the option to **git clone** the project repository into the notebook instance by pasting `https://github.com/NishitSingh2023/Plagiarism-Detector`
+
+### Open and run the notebook of your choice
+
+Now that the repository has been cloned into the notebook instance you may navigate to any of the notebooks that you wish to complete or execute and work with them. Additional instructions are contained in their respective notebooks.
+
+
 
